@@ -1,3 +1,4 @@
+import searchPage from '../specs/pages/search.page'; 
 
 describe(' validate the myntra application', () => {
     it('should verify the url in the application', async () => {
@@ -10,24 +11,22 @@ describe(' validate the myntra application', () => {
     });
     
     it('verifying search by clicking',async () => {
-       
-        const search =  await $('//input[@class="desktop-searchBar"]');
-        await search.waitForClickable({timeout:1000});
-        await search.setValue("watches");
-        await expect(search).toHaveValueContaining('watches');
-        const searchClick = await $('//a[@data-reactid="848"]');
-        await searchClick.click();
-        await searchClick.waitForClickable({timeout:3000}); 
+       await searchPage.search.waitForClickable({timeout:4000});
+       await searchPage.search.setValue("watches");
+       await expect(searchPage.search).toHaveValueContaining('watches');
+       await searchPage.searchClick.click();
+       await searchPage.searchClick.waitForClickable({timeout:4000});
+        
     });
 
-    it('should verify the url of new page opened', async () => {
+    it('should verify the url of new page opened ', async () => {
         await expect(browser).toHaveUrl("https://www.myntra.com/watches");
         await browser.pause(2000);    
     });
 
     it('it should click the product & open a new window ', async () => {
-        const clickingProduct = await $("//img[@title='boAT Unisex Blue Storm M Smart Watch']");
-        await clickingProduct.click();
+        
+        await searchPage.clickingProduct.click();
         let handles = await browser.getWindowHandles();
         await browser.switchToWindow(handles[1]);
         

@@ -21,7 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/exchai.js'
+        './test/specs/automationmyntra.js'
     ],
     // Patterns to exclude.
     exclude: [

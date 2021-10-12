@@ -1,6 +1,3 @@
-import { expect as chaiExpect } from "chai"; 
-
-
 describe(' validate the myntra application', () => {
     it('should verify the url in the application', async () => {
         await  browser.url("https://www.myntra.com/");
@@ -23,8 +20,6 @@ describe(' validate the myntra application', () => {
     });
 
     it('should open a new page and get & print the value of product', async () => {
-        const urlText = await browser.getUrl();
-        chaiExpect(urlText).to.be.include('/watches');
         await expect(browser).toHaveUrl("https://www.myntra.com/watches");
         await browser.pause(2000);    
     });
@@ -38,6 +33,3 @@ describe(' validate the myntra application', () => {
     });
 
 });
-
-
-   

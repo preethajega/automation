@@ -1,5 +1,5 @@
 export default class page {
-    open(){
-        browser.url("https://www.myntra.com/");
+    open(url){
+        browser.url(url);
     }
 }

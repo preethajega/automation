@@ -4,7 +4,7 @@ class watchesPage extends page {
 // to use selectors we have to use geter function    
 // open()--> is a method
 
-    get clickingProduct() {
+    get watchProduct() {
          return $("//img[@title='boAT Unisex Blue Storm M Smart Watch']");
     }
 
@@ -14,13 +14,15 @@ class watchesPage extends page {
     }
 
     open() {
-        super.open("https://www.myntra.com/watches");
+        super.open("/watches");
 
     }
     getWatchGenderCategoryListText() 
     {
-       return this.watchGenderCategoryList.map((element) => 
-       console.log(element.getValue()));
+       return this.watchGenderCategoryList.map((element) => {
+        console.log(element.getValue());
+       });
+       
     }
 }
 

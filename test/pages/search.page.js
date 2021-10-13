@@ -8,11 +8,11 @@ class searchPage extends page {
         return $('//input[@class="desktop-searchBar"]');
     }
 
-    get searchClick() {
+    get searchIcon() {
         return $('//a[@data-reactid="848"]');
     }
     
-    get clickingProduct() {
+    get watchProduct() {
         return $("//img[@title='boAT Unisex Blue Storm M Smart Watch']");
     }
 

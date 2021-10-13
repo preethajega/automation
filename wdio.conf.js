@@ -21,7 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/search.js'
+        './test/specs/watchmoveto.js'
     ],
     // Patterns to exclude.
     exclude: [

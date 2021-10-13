@@ -1,6 +1,4 @@
-
 import watchesPage from '../pages/watches.page';
-
 
 describe(' validate the watches page in myntra application', () => {
     

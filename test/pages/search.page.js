@@ -4,7 +4,7 @@ class searchPage extends page {
 // to use selectors we have to use geter function    
 // open()--> is a method
 
-    get search() {
+    get searchBar() {
         return $('//input[@class="desktop-searchBar"]');
     }
 

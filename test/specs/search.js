@@ -1,6 +1,5 @@
 import searchPage from '../pages/search.page'; 
 
-
 describe(' validate the myntra application', () => {
     it('should verify the url', async () => {
         searchPage.open();
@@ -8,10 +7,10 @@ describe(' validate the myntra application', () => {
     });
 
     it('verifying search by clicking & verify the url',async () => {
-       await searchPage.search.click();
-       await searchPage.search.waitForClickable({timeout:1000});
-       await searchPage.search.setValue("watches");
-       await expect(searchPage.search).toHaveValueContaining('watches');
+       await searchPage.searchBar.click();
+       await searchPage.searchBar.waitForClickable({timeout:1000});
+       await searchPage.searchBar.setValue("watches");
+       await expect(searchPage.searchBar).toHaveValueContaining('watches');
        await browser.pause();
        await searchPage.searchIcon.click();
        await searchPage.searchIcon.waitForClickable({timeout:1000});

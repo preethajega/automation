@@ -21,7 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/automationmyntra.js'
+        './test/specs/watchpage.js'
     ],
     // Patterns to exclude.
     exclude: [

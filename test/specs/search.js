@@ -20,9 +20,10 @@ describe(' validate the myntra application', () => {
 
     it('it should click the product & open a new window ', async () => {
         await searchPage.watchProduct.click();
+        await searchPage.watchProduct.waitForClickable({timeout:2000});
         let handles = await browser.getWindowHandles();
         await browser.switchToWindow(handles[1]);
-        await browser.pause(1000);
+        
     });
 
 });

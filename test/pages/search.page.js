@@ -13,7 +13,7 @@ class searchPage extends page {
     }
     
     get watchProduct() {
-        return $("//img[@title='boAT Unisex Blue Storm M Smart Watch']");
+        return $("//img[@title='boAT Unisex Black Storm M Smart Watch']");
     }
 
     open() {

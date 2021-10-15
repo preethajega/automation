@@ -8,9 +8,14 @@ class watchPage extends page {
          return $("//img[@title='boAT Unisex Blue Storm M Smart Watch']");
     }
 
+    get watchBreadCrumbs() 
+    {
+        return $('span.breadcrumbs-crumb');
+    }
+
     get watchGenderCategoryList() 
     {
-        return $$('//div[@class="vertical-filters-filters"][1]/ul/li/label/input');// 4 elements
+        return $$('//div[@class="vertical-filters-filters categories-container"]/ul/li/label/input');// 4 elements
     }
 
     get womenLink()
@@ -27,10 +32,18 @@ class watchPage extends page {
         super.open("https://www.myntra.com/");
 
     }
+
+    waitForWatchesPage() 
+    {
+        return this.watchBreadCrumbs.waitForDisplayed({timeout:5000});
+    }
+
     getWatchGenderCategoryListText() 
     {
-       return this.watchGenderCategoryList.map((element) => {
-        console.log(element.getValue());
+       return this.watchGenderCategoryList.map(async (element) => {
+        let val = await element.getValue();
+        console.log(val);
+
        });
        
     }
